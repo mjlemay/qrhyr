@@ -1,17 +1,34 @@
 $C = "../Common.ui";
 
 $C.@DecoratedContainer {
-    Anchor: (Width: 600, Height: 500);
+    Anchor: (Width: 460, Height: 560);
 
     #Title {
         $C.@Title { @Text = "QR Code"; }
     }
 
     #Content {
-        Label #Url {
-            Text: "https://hytalemodding.dev";
-            Anchor: (Height: 40);
-            Style: (FontSize: 24, TextColor: #ffffff, Alignment: Center);
+        Group {
+            LayoutMode: Top;
+
+            Group {
+                LayoutMode: Center;
+                Anchor: (Height: 380);
+
+                Group #QrContainer {
+                    Anchor: (Width: 380, Height: 380);
+                    Background: #ffffff;
+                    LayoutMode: Center;
+                }
+            }
+
+            Group { Anchor: (Height: 12); }
+
+            Label #Url {
+                Text: "https://hytalemodding.dev";
+                Anchor: (Height: 40);
+                Style: (FontSize: 18, TextColor: #ffffff, Alignment: Center);
+            }
         }
     }
 }

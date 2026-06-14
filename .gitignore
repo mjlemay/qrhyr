@@ -9,3 +9,6 @@ run/
 .classpath
 .project
 .settings/
+.DS_Store
+.vscode/
+deploy.sh

@@ -13,11 +13,12 @@ public class QrPage extends BasicCustomUIPage {
 
     public QrPage(@Nonnull PlayerRef playerRef, @Nonnull CustomPageLifetime lifetime, String url) {
         super(playerRef, lifetime);
-        this.url = url;
+        this.url = url != null ? url : "http://hytale.com/";
     }
 
     @Override
     public void build(UICommandBuilder uiCommandBuilder) {
         uiCommandBuilder.append("Pages/QrPage.ui");
+        uiCommandBuilder.set("#Url.Text", url);
     }
 }

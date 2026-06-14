@@ -1,12 +1,17 @@
-Group {
-    Anchor: (Width: 400, Height: 250);
-    Background: #1a1a2e(0.95);
-    LayoutMode: Top;
-    Padding: (Full: 20);
+$C = "../Common.ui";
 
-    Label #Title {
-        Text: "Hello World";
-        Anchor: (Height: 40);
-        Style: (FontSize: 24, TextColor: #ffffff, Alignment: Center);
+$C.@DecoratedContainer {
+    Anchor: (Width: 600, Height: 500);
+
+    #Title {
+        $C.@Title { @Text = "QR Code"; }
+    }
+
+    #Content {
+        Label #Url {
+            Text: "https://hytalemodding.dev";
+            Anchor: (Height: 40);
+            Style: (FontSize: 24, TextColor: #ffffff, Alignment: Center);
+        }
     }
 }

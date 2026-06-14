@@ -1,13 +1,8 @@
-# Hytale Plugin Template
+# QRHYR: The QR Writer for Hytale Modding!
 
-A ready-to-use starting point for creating Hytale server plugins with Java, _or Kotlin_. If you've
-been using the Asset Editor and want to start writing server-side logic — custom commands, event
-handling, gameplay systems — this is the simplest place to begin.
+Add qr codes to the hytale game so that players can scan them and not exit the game! I'm totally not a millenial, don't judge me!
 
-This template uses the [Hytale Gradle Plugin](https://github.com/AzureDoom/Hytale-Gradle-Plugin),
-a Gradle plugin maintained by AzureDoom for Hytale mod/plugin development. It handles the repetitive
-project setup work for you, including manifest generation, validation, local server runs, IDE source
-setup, and optional hosted Hytale Javadoc injection.
+This mod is based on the [Hytale Plugin Template](https://github.com/HytaleModding/plugin-template). It is an excellent resource to start your journey into Hytale modding! With this template, we are also using the [Hytale Gradle Plugin](https://github.com/AzureDoom/Hytale-Gradle-Plugin). Take a look if you are a pro and want to develop in your own way!
 
 ## How to start
 
@@ -39,14 +34,9 @@ setup, and optional hosted Hytale Javadoc injection.
    ./gradlew runServer
    ```
 
-> On Windows, use `./gradlew.bat` or `gradlew.bat` instead of `./gradlew`. The Gradle wrapper is
-> included so you do not need to install Gradle separately; only Java is required.
+When the server starts, the output may prompt you to authorize your Hytale server. After that, you can begin developing your plugin while the server handles local development runs.
 
-When the server starts, the output may prompt you to authorize your Hytale server. After that, you
-can begin developing your plugin while the server handles local development runs.
-
-From here, the [HytaleModding guides](https://hytalemodding.dev/en/docs/guides/plugin/build-and-test)
-cover more details.
+More info at [HytaleModding guides](https://hytalemodding.dev/en/docs/guides/plugin/build-and-test).
 
 ## Hytale Gradle Plugin
 
@@ -157,5 +147,4 @@ After changing these values, run:
 
 ## License
 
-Add your own license after copying the template. We recommend MIT, BSD, or Apache to keep the
-modding community open.
+License TBD! For now just don't be evil!

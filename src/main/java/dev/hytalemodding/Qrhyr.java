@@ -5,30 +5,36 @@ import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
 import com.hypixel.hytale.server.core.util.Config;
 import dev.hytalemodding.commands.ExampleCommand;
-import dev.hytalemodding.config.ExampleConfig;
+import dev.hytalemodding.commands.QrCommand;
+import dev.hytalemodding.config.QrhyrConfig;
 import dev.hytalemodding.events.ExampleEvent;
+import dev.hytalemodding.events.QrEvent;
 
 import javax.annotation.Nonnull;
 
-public class ExamplePlugin extends JavaPlugin {
+public class Qrhyr extends JavaPlugin {
 
-    private static Config<ExampleConfig> config = null;
+    private static Config<QrhyrConfig> config = null;
 
-    public ExamplePlugin(@Nonnull JavaPluginInit init) {
+    public Qrhyr(@Nonnull JavaPluginInit init) {
         super(init);
-        config = this.withConfig("example_config", ExampleConfig.CODEC);
+        config = this.withConfig("qrhyr_config", QrhyrConfig.CODEC);
     }
 
     @Override
     protected void setup() {
         config.save();
         this.getCommandRegistry().registerCommand(new ExampleCommand("example", "An example command"));
+        this.getCommandRegistry().registerCommand(new QrCommand("qr", "A command for QR"));
         if (getConfig().get().isEnabledWelcomeMessage()) {
             this.getEventRegistry().registerGlobal(PlayerReadyEvent.class, ExampleEvent::onPlayerReady);
         }
+        if (getConfig().get().isEnabledQrCodes()) {
+            this.getEventRegistry().registerGlobal(PlayerReadyEvent.class, QrEvent::onPlayerReady);
+        }
     }
 
-    public static Config<ExampleConfig> getConfig() {
+    public static Config<QrhyrConfig> getConfig() {
         return config;
     }
 }

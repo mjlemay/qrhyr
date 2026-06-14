@@ -46,10 +46,6 @@ public class QrCommand extends AbstractCommand {
         Ref<EntityStore> ref = context.senderAsPlayerRef();
         Store<EntityStore> store = ref.getStore();
 
-        // execute() runs on an async ForkJoinPool worker, but the entity store
-        // and page manager must be touched on the world thread that owns them
-        // (otherwise store.assertThread() throws "Assert not in thread!").
-        // World implements Executor, so hop onto it before accessing the store.
         World world = store.getExternalData().getWorld();
         world.execute(() -> {
             if (!ref.isValid()) {

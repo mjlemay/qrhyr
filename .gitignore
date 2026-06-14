@@ -12,3 +12,4 @@ run/
 .DS_Store
 .vscode/
 deploy.sh
+docs/

@@ -50,6 +50,16 @@ tasks.named<Test>("test") {
     useJUnitPlatform()
 }
 
+// Keep build/libs holding only the freshly built jar. The version auto-bumps on
+// each commit, so without this, stale Qrhyr-<old-version>.jar files accumulate.
+tasks.named<Jar>("jar") {
+    doFirst {
+        project.delete(project.fileTree(project.layout.buildDirectory.dir("libs")) {
+            include("*.jar")
+        })
+    }
+}
+
 // Uncomment if you are using IntelliJ.
 // idea {
 //     module {

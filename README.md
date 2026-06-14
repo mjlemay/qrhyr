@@ -147,4 +147,4 @@ After changing these values, run:
 
 ## License
 
-License TBD! For now just don't be evil!
+MIT

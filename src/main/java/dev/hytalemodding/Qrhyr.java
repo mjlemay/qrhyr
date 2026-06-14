@@ -25,7 +25,7 @@ public class Qrhyr extends JavaPlugin {
     protected void setup() {
         config.save();
         this.getCommandRegistry().registerCommand(new ExampleCommand("example", "An example command"));
-        this.getCommandRegistry().registerCommand(new QrCommand("qr", "A command for QR"));
+        this.getCommandRegistry().registerCommand(new QrCommand("qr", "http://hytale.com/"));
         if (getConfig().get().isEnabledWelcomeMessage()) {
             this.getEventRegistry().registerGlobal(PlayerReadyEvent.class, ExampleEvent::onPlayerReady);
         }

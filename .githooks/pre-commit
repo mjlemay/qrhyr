@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#
+# Auto-bump the patch version on every commit and stage the change so the
+# bump is part of the commit being created.
+#
+set -euo pipefail
+
+ROOT="$(git rev-parse --show-toplevel)"
+"$ROOT/scripts/bump-version.sh"
+git add "$ROOT/gradle.properties"

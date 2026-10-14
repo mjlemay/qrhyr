@@ -1,7 +1,7 @@
 {
     "Group": "HytaleModding",
     "Name": "Qrhyr",
-    "Version": "0.0.4",
+    "Version": "0.1.1",
     "Description": "Description of your plugin",
     "Authors": [
         {
@@ -19,7 +19,7 @@
     "OptionalDependencies": {
         
     },
-    "ServerVersion": ">=0.5.3 <0.7.0",
+    "ServerVersion": ">=0.7.1 <0.8.0",
     "Main": "dev.hytalemodding.Qrhyr",
     "UpdateChecker": {
         "CurseForge": ""
